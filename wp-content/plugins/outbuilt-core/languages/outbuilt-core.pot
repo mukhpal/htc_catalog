@@ -1,0 +1,886 @@
+# Copyright (C) 2022 Outbuilt Core
+# This file is distributed under the same license as the Outbuilt Core package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Outbuilt Core\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: inc/elementor/elementor.php:53
+msgid "Outbuilt Core"
+msgstr ""
+
+#: inc/elementor/widgets/events.php:25, inc/elementor/widgets/events.php:45
+msgid "Events"
+msgstr ""
+
+#: inc/elementor/widgets/events.php:52
+msgid "Events Per Page"
+msgstr ""
+
+#: inc/elementor/widgets/events.php:62, inc/elementor/widgets/team.php:50, inc/elementor/widgets/team.php:257, inc/elementor/widgets/testimonial.php:49, inc/elementor/widgets/testimonial.php:470
+msgid "Style"
+msgstr ""
+
+#: inc/elementor/widgets/events.php:66, inc/widgets/class-widget-social.php:398
+msgid "Simple"
+msgstr ""
+
+#: inc/elementor/widgets/events.php:67
+msgid "List"
+msgstr ""
+
+#: inc/elementor/widgets/events.php:68
+msgid "Grid"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:20, inc/elementor/widgets/post-alt.php:40
+msgid "Post Alternate"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:47, inc/elementor/widgets/post-grid.php:47, inc/elementor/widgets/post-list.php:47, inc/elementor/widgets/post-type-carousel.php:69, inc/elementor/widgets/post-type-grid.php:60, inc/elementor/widgets/post.php:48
+msgid "Posts Per Page"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:48, inc/elementor/widgets/post-grid.php:48, inc/elementor/widgets/post-list.php:48, inc/elementor/widgets/post-type-carousel.php:70, inc/elementor/widgets/post-type-grid.php:61, inc/elementor/widgets/post.php:49, inc/elementor/widgets/product.php:54
+msgid "You can enter \"-1\" to display all items."
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:58, inc/elementor/widgets/post-grid.php:58, inc/elementor/widgets/post-list.php:58, inc/elementor/widgets/post-type-carousel.php:80, inc/elementor/widgets/post-type-grid.php:71, inc/elementor/widgets/post.php:59, inc/elementor/widgets/product.php:96, inc/widgets/class-widget-recent-posts.php:270
+msgid "Order"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:62, inc/elementor/widgets/post-alt.php:76, inc/elementor/widgets/post-grid.php:62, inc/elementor/widgets/post-grid.php:76, inc/elementor/widgets/post-list.php:62, inc/elementor/widgets/post-list.php:76, inc/elementor/widgets/post-type-carousel.php:84, inc/elementor/widgets/post-type-carousel.php:98, inc/elementor/widgets/post-type-grid.php:75, inc/elementor/widgets/post-type-grid.php:89, inc/elementor/widgets/post.php:63, inc/elementor/widgets/post.php:77
+msgid "Default"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:63, inc/elementor/widgets/post-grid.php:63, inc/elementor/widgets/post-list.php:63, inc/elementor/widgets/post-type-carousel.php:85, inc/elementor/widgets/post-type-grid.php:76, inc/elementor/widgets/post.php:64, inc/elementor/widgets/product.php:100
+msgid "DESC"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:64, inc/elementor/widgets/post-grid.php:64, inc/elementor/widgets/post-list.php:64, inc/elementor/widgets/post-type-carousel.php:86, inc/elementor/widgets/post-type-grid.php:77, inc/elementor/widgets/post.php:65, inc/elementor/widgets/product.php:101
+msgid "ASC"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:72, inc/elementor/widgets/post-grid.php:72, inc/elementor/widgets/post-list.php:72, inc/elementor/widgets/post-type-carousel.php:94, inc/elementor/widgets/post-type-grid.php:85, inc/elementor/widgets/post.php:73, inc/elementor/widgets/product.php:81, inc/widgets/class-widget-recent-posts.php:279
+msgid "Order By"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:77, inc/elementor/widgets/post-grid.php:77, inc/elementor/widgets/post-list.php:77, inc/elementor/widgets/post-type-carousel.php:99, inc/elementor/widgets/post-type-grid.php:90, inc/elementor/widgets/post.php:78, inc/elementor/widgets/product.php:85, inc/widgets/class-widget-recent-posts.php:285
+msgid "Date"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:78, inc/elementor/widgets/post-grid.php:78, inc/elementor/widgets/post-list.php:78, inc/elementor/widgets/post-type-carousel.php:100, inc/elementor/widgets/post-type-grid.php:91, inc/elementor/widgets/post.php:79, inc/elementor/widgets/team.php:152, inc/widgets/class-widget-facebook.php:163, inc/widgets/class-widget-recent-posts.php:203, inc/widgets/class-widget-recent-posts.php:286, inc/widgets/class-widget-social.php:388
+msgid "Title"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:79, inc/elementor/widgets/post-grid.php:79, inc/elementor/widgets/post-list.php:79, inc/elementor/widgets/post-type-carousel.php:101, inc/elementor/widgets/post-type-grid.php:92, inc/elementor/widgets/post.php:80, inc/elementor/widgets/team.php:107, inc/elementor/widgets/team.php:344, inc/elementor/widgets/testimonial.php:82, inc/elementor/widgets/testimonial.php:566
+msgid "Name"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:80, inc/elementor/widgets/post-grid.php:80, inc/elementor/widgets/post-list.php:80, inc/elementor/widgets/post-type-carousel.php:102, inc/elementor/widgets/post-type-grid.php:93, inc/elementor/widgets/post.php:81, inc/widgets/class-widget-recent-posts.php:287
+msgid "Modified"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:81, inc/elementor/widgets/post-grid.php:81, inc/elementor/widgets/post-list.php:81, inc/elementor/widgets/post-type-carousel.php:103, inc/elementor/widgets/post-type-grid.php:94, inc/elementor/widgets/post.php:82, inc/widgets/class-widget-recent-posts.php:288
+msgid "Author"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:82, inc/elementor/widgets/post-grid.php:82, inc/elementor/widgets/post-list.php:82, inc/elementor/widgets/post-type-carousel.php:104, inc/elementor/widgets/post-type-grid.php:95, inc/elementor/widgets/post.php:83, inc/elementor/widgets/product.php:87, inc/widgets/class-widget-recent-posts.php:289
+msgid "Random"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:83, inc/elementor/widgets/post-grid.php:83, inc/elementor/widgets/post-list.php:83, inc/elementor/widgets/post-type-carousel.php:105, inc/elementor/widgets/post-type-grid.php:96, inc/elementor/widgets/post.php:84
+msgid "ID"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:84, inc/elementor/widgets/post-grid.php:84, inc/elementor/widgets/post-list.php:84, inc/elementor/widgets/post-type-carousel.php:106, inc/elementor/widgets/post-type-grid.php:97, inc/elementor/widgets/post.php:85, inc/widgets/class-widget-recent-posts.php:290
+msgid "Comment Count"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:85, inc/elementor/widgets/post-grid.php:85, inc/elementor/widgets/post-list.php:85, inc/elementor/widgets/post-type-carousel.php:107, inc/elementor/widgets/post-type-grid.php:98, inc/elementor/widgets/post.php:86
+msgid "Menu Order"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:93, inc/elementor/widgets/post-grid.php:93, inc/elementor/widgets/post-list.php:93, inc/elementor/widgets/post.php:94
+msgid "Include Categories"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:94, inc/elementor/widgets/post-alt.php:104, inc/elementor/widgets/post-grid.php:94, inc/elementor/widgets/post-grid.php:104, inc/elementor/widgets/post-list.php:94, inc/elementor/widgets/post-list.php:104, inc/elementor/widgets/post.php:95, inc/elementor/widgets/post.php:105
+msgid "Enter the categories slugs seperated by a \"comma\""
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:103, inc/elementor/widgets/post-grid.php:103, inc/elementor/widgets/post-list.php:103, inc/elementor/widgets/post.php:104
+msgid "Exclude Categories"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:113, inc/elementor/widgets/post-grid.php:113, inc/elementor/widgets/post-list.php:113, inc/elementor/widgets/post.php:114
+msgid "Include Tags"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:114, inc/elementor/widgets/post-grid.php:114, inc/elementor/widgets/post-list.php:114, inc/elementor/widgets/post.php:115
+msgid "Enter the tags slugs seperated by a \"comma\""
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:123, inc/elementor/widgets/post-grid.php:123, inc/elementor/widgets/post-list.php:123, inc/elementor/widgets/post.php:124
+msgid "Offset"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:124, inc/elementor/widgets/post-grid.php:124, inc/elementor/widgets/post-list.php:124, inc/elementor/widgets/post.php:125
+msgid "Number of post to displace or pass over."
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:133, inc/elementor/widgets/post-grid.php:146, inc/elementor/widgets/post-list.php:133, inc/elementor/widgets/post-type-grid.php:119, inc/elementor/widgets/post.php:134, inc/elementor/widgets/testimonial.php:1229
+msgid "Pagination"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:137, inc/elementor/widgets/post-grid.php:150, inc/elementor/widgets/post-list.php:137, inc/elementor/widgets/post-type-grid.php:123, inc/elementor/widgets/post.php:138
+msgid "Enable"
+msgstr ""
+
+#: inc/elementor/widgets/post-alt.php:138, inc/elementor/widgets/post-grid.php:151, inc/elementor/widgets/post-list.php:138, inc/elementor/widgets/post-type-grid.php:124, inc/elementor/widgets/post.php:139
+msgid "Disable"
+msgstr ""
+
+#: inc/elementor/widgets/post-grid.php:20, inc/elementor/widgets/post-grid.php:40
+msgid "Post Grid"
+msgstr ""
+
+#: inc/elementor/widgets/post-grid.php:133, inc/elementor/widgets/post-type-grid.php:106
+msgid "Columns"
+msgstr ""
+
+#: inc/elementor/widgets/post-grid.php:137, inc/elementor/widgets/post-type-grid.php:110
+msgid "Two Columns"
+msgstr ""
+
+#: inc/elementor/widgets/post-grid.php:138, inc/elementor/widgets/post-type-grid.php:111
+msgid "Three Columns"
+msgstr ""
+
+#: inc/elementor/widgets/post-list.php:20, inc/elementor/widgets/post-list.php:40
+msgid "Post List"
+msgstr ""
+
+#: inc/elementor/widgets/post-type-carousel.php:21, inc/elementor/widgets/post-type-carousel.php:49
+msgid "Post Type Carousel"
+msgstr ""
+
+#: inc/elementor/widgets/post-type-carousel.php:56, inc/elementor/widgets/post-type-grid.php:47, inc/widgets/class-widget-recent-posts.php:228
+msgid "Post Type"
+msgstr ""
+
+#: inc/elementor/widgets/post-type-grid.php:20, inc/elementor/widgets/post-type-grid.php:40
+msgid "Post Type Grid"
+msgstr ""
+
+#: inc/elementor/widgets/post.php:21, inc/elementor/widgets/post.php:41, inc/widgets/class-widget-recent-posts.php:231
+msgid "Post"
+msgstr ""
+
+#: inc/elementor/widgets/product.php:26, inc/elementor/widgets/product.php:46
+msgid "Product"
+msgstr ""
+
+#: inc/elementor/widgets/product.php:53
+msgid "Product Per Page"
+msgstr ""
+
+#: inc/elementor/widgets/product.php:67
+msgid "Show"
+msgstr ""
+
+#: inc/elementor/widgets/product.php:71
+msgid "All products"
+msgstr ""
+
+#: inc/elementor/widgets/product.php:72
+msgid "Featured products"
+msgstr ""
+
+#: inc/elementor/widgets/product.php:73
+msgid "On-sale products"
+msgstr ""
+
+#: inc/elementor/widgets/product.php:86
+msgid "Price"
+msgstr ""
+
+#: inc/elementor/widgets/product.php:88
+msgid "Sales"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:14, inc/elementor/widgets/team.php:43
+msgid "Team Member"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:54, inc/elementor/widgets/testimonial.php:53
+msgid "Style One"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:55, inc/elementor/widgets/testimonial.php:54
+msgid "Style Two"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:56, inc/elementor/widgets/testimonial.php:55
+msgid "Style Three"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:57, inc/elementor/widgets/testimonial.php:56
+msgid "Style Four"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:58, inc/elementor/widgets/testimonial.php:57
+msgid "Style Five"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:59, inc/elementor/widgets/testimonial.php:58
+msgid "Style Six"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:60, inc/elementor/widgets/testimonial.php:59
+msgid "Style Seven"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:68
+msgid "Image Hover Animate"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:72, inc/widgets/class-widget-social.php:405
+msgid "None"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:73, inc/elementor/widgets/team.php:410, inc/elementor/widgets/team.php:507, inc/elementor/widgets/team.php:604, inc/elementor/widgets/team.php:673, inc/elementor/widgets/testimonial.php:578, inc/elementor/widgets/testimonial.php:676, inc/elementor/widgets/testimonial.php:774, inc/elementor/widgets/testimonial.php:873, inc/elementor/widgets/testimonial.php:942
+msgid "Left"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:74, inc/elementor/widgets/team.php:418, inc/elementor/widgets/team.php:515, inc/elementor/widgets/team.php:612, inc/elementor/widgets/team.php:681, inc/elementor/widgets/testimonial.php:586, inc/elementor/widgets/testimonial.php:684, inc/elementor/widgets/testimonial.php:782, inc/elementor/widgets/testimonial.php:881, inc/elementor/widgets/testimonial.php:950
+msgid "Right"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:75
+msgid "Top"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:76
+msgid "Bottom"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:87
+msgid "Member image"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:109
+msgid "Sams Roy"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:116, inc/elementor/widgets/team.php:440, inc/elementor/widgets/testimonial.php:108, inc/elementor/widgets/testimonial.php:664
+msgid "Designation"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:118
+msgid "Managing director"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:128
+msgid "Bio Info"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:130
+msgid "I am web developer."
+msgstr ""
+
+#: inc/elementor/widgets/team.php:143, inc/elementor/widgets/team.php:634
+msgid "Social Media"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:161
+msgid "Link"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:163, inc/elementor/widgets/team.php:244
+msgid "https://www.facebook.com/hastech.company/"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:170
+msgid "Icon"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:182
+msgid "Icon Color"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:193
+msgid "Icon Background"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:204
+msgid "Icon Hover Color"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:215
+msgid "Icon Hover Background"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:226
+msgid "Icon Hover border color"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:265, inc/elementor/widgets/team.php:380, inc/elementor/widgets/team.php:477, inc/elementor/widgets/team.php:574, inc/elementor/widgets/team.php:642, inc/elementor/widgets/testimonial.php:478, inc/elementor/widgets/testimonial.php:535, inc/elementor/widgets/testimonial.php:632, inc/elementor/widgets/testimonial.php:730, inc/elementor/widgets/testimonial.php:828, inc/elementor/widgets/testimonial.php:900, inc/elementor/widgets/testimonial.php:970
+msgid "Margin"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:278, inc/elementor/widgets/team.php:393, inc/elementor/widgets/team.php:490, inc/elementor/widgets/team.php:587, inc/elementor/widgets/team.php:656, inc/elementor/widgets/testimonial.php:491, inc/elementor/widgets/testimonial.php:549, inc/elementor/widgets/testimonial.php:646, inc/elementor/widgets/testimonial.php:744, inc/elementor/widgets/testimonial.php:843, inc/elementor/widgets/testimonial.php:913, inc/elementor/widgets/testimonial.php:984, inc/elementor/widgets/testimonial.php:1151
+msgid "Padding"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:292, inc/elementor/widgets/testimonial.php:1068, inc/elementor/widgets/testimonial.php:1192, inc/elementor/widgets/testimonial.php:1252, inc/elementor/widgets/testimonial.php:1347
+msgid "Background"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:301, inc/elementor/widgets/team.php:321
+msgid "Hover Content background color"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:355, inc/elementor/widgets/team.php:452, inc/elementor/widgets/team.php:549, inc/elementor/widgets/testimonial.php:606, inc/elementor/widgets/testimonial.php:704, inc/elementor/widgets/testimonial.php:802, inc/elementor/widgets/testimonial.php:1024, inc/elementor/widgets/testimonial.php:1175, inc/widgets/class-widget-social.php:450
+msgid "Color"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:406, inc/elementor/widgets/team.php:503, inc/elementor/widgets/team.php:600, inc/elementor/widgets/team.php:669, inc/elementor/widgets/testimonial.php:574, inc/elementor/widgets/testimonial.php:672, inc/elementor/widgets/testimonial.php:770, inc/elementor/widgets/testimonial.php:869, inc/elementor/widgets/testimonial.php:938
+msgid "Alignment"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:414, inc/elementor/widgets/team.php:511, inc/elementor/widgets/team.php:608, inc/elementor/widgets/team.php:677, inc/elementor/widgets/testimonial.php:582, inc/elementor/widgets/testimonial.php:680, inc/elementor/widgets/testimonial.php:778, inc/elementor/widgets/testimonial.php:877, inc/elementor/widgets/testimonial.php:946
+msgid "Center"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:422, inc/elementor/widgets/team.php:519, inc/elementor/widgets/team.php:616, inc/elementor/widgets/team.php:685, inc/elementor/widgets/testimonial.php:590, inc/elementor/widgets/testimonial.php:688, inc/elementor/widgets/testimonial.php:786, inc/elementor/widgets/testimonial.php:885, inc/elementor/widgets/testimonial.php:954
+msgid "Justified"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:537
+msgid "Bio info"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:701, inc/elementor/widgets/testimonial.php:516, inc/elementor/widgets/testimonial.php:1078, inc/elementor/widgets/testimonial.php:1202, inc/elementor/widgets/testimonial.php:1262, inc/elementor/widgets/testimonial.php:1357
+msgid "Border"
+msgstr ""
+
+#: inc/elementor/widgets/team.php:709, inc/elementor/widgets/testimonial.php:524, inc/elementor/widgets/testimonial.php:1086, inc/elementor/widgets/testimonial.php:1210, inc/elementor/widgets/testimonial.php:1270, inc/elementor/widgets/testimonial.php:1365, inc/widgets/class-widget-social.php:434
+msgid "Border Radius"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:14, inc/elementor/widgets/testimonial.php:42
+msgid "Testimonial"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:60
+msgid "Style Eight"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:61
+msgid "Style Nine"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:69
+msgid "Slider"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:84
+msgid "Ahnaf Abid Al"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:91, inc/elementor/widgets/testimonial.php:507
+msgid "Image"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:110
+msgid "Developer"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:117
+msgid "Client Say"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:119
+msgid "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat."
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:130
+msgid "John Doe"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:131
+msgid "Founder"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:132
+msgid "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus at officiis, ad labore quaerat incidunt ea praesentium veniam repellendus iste dolorem, commodi totam tenetur eligendi autem sunt sed? Quidem, sint."
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:135
+msgid "John Smith"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:136
+msgid "Manager"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:137
+msgid "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla in dolores, quisquam architecto reprehenderit sunt inventore ad reiciendis sed laudantium id quos omnis. Suscipit, quis recusandae! Architecto, tempore? Eveniet, odit?"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:140
+msgid "Jane Doe"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:141
+msgid "Director"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:142
+msgid "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi in deleniti, non assumenda porro animi dolores odio quae perferendis doloribus aperiam pariatur ducimus mollitia tenetur, vero eos velit nesciunt sit."
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:152
+msgid "Divider image"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:176
+msgid "Slider Option"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:186, inc/elementor/widgets/testimonial.php:368, inc/elementor/widgets/testimonial.php:423
+msgid "Slider Items"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:201
+msgid "Slider Arrow"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:214
+msgid "Previous icon"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:230
+msgid "Next icon"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:246
+msgid "Slider dots"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:260, inc/widgets/class-widget-recent-posts.php:250
+msgid "No"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:261
+msgid "Yes"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:264
+msgid "Pause on Hover?"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:274
+msgid "Center Mode"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:287
+msgid "Center padding"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:303
+msgid "Slider auto play"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:317
+msgid "Autoplay speed"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:329
+msgid "Autoplay animation speed"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:341, inc/elementor/widgets/testimonial.php:383, inc/elementor/widgets/testimonial.php:438
+msgid "Slider item to scroll"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:356
+msgid "Tablet"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:398
+msgid "Tablet Resolution"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:399
+msgid "The resolution to tablet."
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:411
+msgid "Mobile Phone"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:453
+msgid "Mobile Resolution"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:454
+msgid "The resolution to mobile."
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:762
+msgid "Client say"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:861
+msgid "Content Box"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:930
+msgid "Divider/Shape Style"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:1002
+msgid "Arrow"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:1017, inc/elementor/widgets/testimonial.php:1244
+msgid "Normal"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:1040, inc/widgets/class-widget-social.php:428
+msgid "Font Size"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:1097, inc/elementor/widgets/testimonial.php:1281, inc/widgets/class-widget-facebook.php:180
+msgid "Height"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:1124, inc/elementor/widgets/testimonial.php:1308, inc/widgets/class-widget-facebook.php:175
+msgid "Width"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:1168
+msgid "Hover"
+msgstr ""
+
+#: inc/elementor/widgets/testimonial.php:1339
+msgid "Active"
+msgstr ""
+
+#: inc/functions.php:39
+msgid "Twitter URL"
+msgstr ""
+
+#: inc/functions.php:40
+msgid "Facebook URL"
+msgstr ""
+
+#: inc/functions.php:41
+msgid "Google Plus URL"
+msgstr ""
+
+#: inc/functions.php:42
+msgid "Instagram URL"
+msgstr ""
+
+#: inc/functions.php:43
+msgid "Pinterest URL"
+msgstr ""
+
+#: inc/functions.php:44
+msgid "Linkedin URL"
+msgstr ""
+
+#: inc/functions.php:45
+msgid "Dribbble URL"
+msgstr ""
+
+#: inc/widgets/class-widget-facebook.php:34
+msgid "&rarr; Facebook Like"
+msgstr ""
+
+#: inc/widgets/class-widget-facebook.php:37
+msgid "Display a Facebook Like Box to connect visitors to your Facebook Page."
+msgstr ""
+
+#: inc/widgets/class-widget-facebook.php:61
+msgid "It looks like your Facebook URL is incorrectly configured. Please check it in your <a href=\"%s\">widget settings</a>."
+msgstr ""
+
+#: inc/widgets/class-widget-facebook.php:168
+msgid "Facebook Page URL"
+msgstr ""
+
+#: inc/widgets/class-widget-facebook.php:171
+msgid "The Like Box only works with "
+msgstr ""
+
+#: inc/widgets/class-widget-facebook.php:171
+msgid "Facebook Pages"
+msgstr ""
+
+#: inc/widgets/class-widget-facebook.php:185
+msgid "Color Scheme"
+msgstr ""
+
+#: inc/widgets/class-widget-facebook.php:187, inc/widgets/class-widget-social.php:372, inc/widgets/class-widget-social.php:395, inc/widgets/class-widget-twitter.php:233
+msgid "Light"
+msgstr ""
+
+#: inc/widgets/class-widget-facebook.php:188, inc/widgets/class-widget-social.php:396, inc/widgets/class-widget-twitter.php:234
+msgid "Dark"
+msgstr ""
+
+#: inc/widgets/class-widget-facebook.php:195
+msgid "Show Faces"
+msgstr ""
+
+#: inc/widgets/class-widget-facebook.php:197
+msgid "Show profile photos in the plugin."
+msgstr ""
+
+#: inc/widgets/class-widget-facebook.php:204
+msgid "Show Stream"
+msgstr ""
+
+#: inc/widgets/class-widget-facebook.php:206
+msgid "Show the profile stream for the public profile."
+msgstr ""
+
+#: inc/widgets/class-widget-facebook.php:213
+msgid "Show Border"
+msgstr ""
+
+#: inc/widgets/class-widget-facebook.php:215
+msgid "Show a border around the plugin."
+msgstr ""
+
+#: inc/widgets/class-widget-facebook.php:222
+msgid "Show Wall"
+msgstr ""
+
+#: inc/widgets/class-widget-facebook.php:224
+msgid "Show the wall for a Places page rather than friend activity."
+msgstr ""
+
+#: inc/widgets/class-widget-recent-posts.php:22
+msgid "&rarr;  Recent Posts Thumbnail"
+msgstr ""
+
+#: inc/widgets/class-widget-recent-posts.php:25
+msgid "Shows a listing of your recent or random posts with thumbnail."
+msgstr ""
+
+#: inc/widgets/class-widget-recent-posts.php:31
+msgid "Recent Posts"
+msgstr ""
+
+#: inc/widgets/class-widget-recent-posts.php:151
+msgid "No posts found."
+msgstr ""
+
+#: inc/widgets/class-widget-recent-posts.php:136
+msgid "0 Comments"
+msgstr ""
+
+#: inc/widgets/class-widget-recent-posts.php:136
+msgid "% Comments"
+msgstr ""
+
+#: inc/widgets/class-widget-recent-posts.php:209
+msgid "Enable thumbnail?"
+msgstr ""
+
+#: inc/widgets/class-widget-recent-posts.php:212
+msgid "Post style"
+msgstr ""
+
+#: inc/widgets/class-widget-recent-posts.php:215
+msgid "Classic style"
+msgstr ""
+
+#: inc/widgets/class-widget-recent-posts.php:219
+msgid "Grid style"
+msgstr ""
+
+#: inc/widgets/class-widget-recent-posts.php:223
+msgid "Number"
+msgstr ""
+
+#: inc/widgets/class-widget-recent-posts.php:247
+msgid "Query By Taxonomy"
+msgstr ""
+
+#: inc/widgets/class-widget-recent-posts.php:263
+msgid "Terms"
+msgstr ""
+
+#: inc/widgets/class-widget-recent-posts.php:266
+msgid "Enter the term slugs to query by seperated by a \"comma\""
+msgstr ""
+
+#: inc/widgets/class-widget-recent-posts.php:273
+msgid "Descending"
+msgstr ""
+
+#: inc/widgets/class-widget-recent-posts.php:274
+msgid "Ascending"
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:97
+msgid "&rarr; Social Icons"
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:100
+msgid "Display your social media icons."
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:371
+msgid "Follow Us"
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:373, inc/widgets/class-widget-social.php:407
+msgid "Rotate"
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:393
+msgid "Style:"
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:397
+msgid "Colored"
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:403
+msgid "Transition:"
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:406
+msgid "Float"
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:408
+msgid "Zoom Out"
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:413
+msgid "Link Target"
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:416
+msgid "Blank"
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:417
+msgid "Self"
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:422
+msgid "Dimensions"
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:424, inc/widgets/class-widget-social.php:430, inc/widgets/class-widget-social.php:436
+msgid "Example:"
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:440
+msgid "Background Color"
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:445
+msgid "Background Color Hover"
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:455
+msgid "Color Hover"
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:460
+msgid "Border Color"
+msgstr ""
+
+#: inc/widgets/class-widget-social.php:465
+msgid "Border Color Hover"
+msgstr ""
+
+#: inc/widgets/class-widget-twitter.php:20
+msgid "&rarr; Twitter"
+msgstr ""
+
+#: inc/widgets/class-widget-twitter.php:23
+msgid "Pulls in tweets from your twitter account."
+msgstr ""
+
+#: inc/widgets/class-widget-twitter.php:77
+msgid "My Tweets"
+msgstr ""
+
+#: inc/widgets/class-widget-twitter.php:172
+msgid "Follow me on Twitter"
+msgstr ""
+
+#: inc/widgets/class-widget-twitter.php:187
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/class-widget-twitter.php:192
+msgid "Width (px):"
+msgstr ""
+
+#: inc/widgets/class-widget-twitter.php:197
+msgid "Height (px):"
+msgstr ""
+
+#: inc/widgets/class-widget-twitter.php:202
+msgid "# of Tweets Shown:"
+msgstr ""
+
+#: inc/widgets/class-widget-twitter.php:207
+msgid "Username:"
+msgstr ""
+
+#: inc/widgets/class-widget-twitter.php:212
+msgid "Layout Options:"
+msgstr ""
+
+#: inc/widgets/class-widget-twitter.php:213
+msgid "No Header"
+msgstr ""
+
+#: inc/widgets/class-widget-twitter.php:214
+msgid "No Footer"
+msgstr ""
+
+#: inc/widgets/class-widget-twitter.php:215
+msgid "No Borders"
+msgstr ""
+
+#: inc/widgets/class-widget-twitter.php:216
+msgid "No Scrollbar"
+msgstr ""
+
+#: inc/widgets/class-widget-twitter.php:217
+msgid "Transparent Background"
+msgstr ""
+
+#: inc/widgets/class-widget-twitter.php:221
+msgid "Link Color (hex):"
+msgstr ""
+
+#: inc/widgets/class-widget-twitter.php:226
+msgid "Border Color (hex):"
+msgstr ""
+
+#: inc/widgets/class-widget-twitter.php:231
+msgid "Timeline Theme:"
+msgstr ""
