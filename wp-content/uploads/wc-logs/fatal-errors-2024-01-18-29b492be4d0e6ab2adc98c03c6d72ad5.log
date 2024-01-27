@@ -1,0 +1,12 @@
+2024-01-18T06:42:26+00:00 CRITICAL Uncaught Error: Call to undefined function curl_init() in /data/html/htc_catalog/wp-content/plugins/sr-product-360o-view/includes/srCURLMethods.php:133
+Stack trace:
+#0 /data/html/htc_catalog/wp-content/plugins/sr-product-360o-view/includes/srCURLMethods.php(25): srCURLMethods->sendRequest()
+#1 /data/html/htc_catalog/wp-content/plugins/sr-product-360o-view/includes/templates/license.php(29): srCURLMethods->get_unauthorize_token()
+#2 /data/html/htc_catalog/wp-content/plugins/sr-product-360o-view/includes/sr360AdminMenu.php(87): include_once('...')
+#3 /data/html/htc_catalog/wp-includes/class-wp-hook.php(324): sr360AdminMenu->license_callback()
+#4 /data/html/htc_catalog/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#5 /data/html/htc_catalog/wp-includes/plugin.php(517): WP_Hook->do_action()
+#6 /data/html/htc_catalog/wp-admin/admin.php(259): do_action()
+#7 {main}
+  thrown in /data/html/htc_catalog/wp-content/plugins/sr-product-360o-view/includes/srCURLMethods.php on line 133
+
