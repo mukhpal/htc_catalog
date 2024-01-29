@@ -43,6 +43,23 @@
 	   return ob_get_clean();
 	}
 
+	/**
+	 * @snippet       Redirect Login/Registration to My Account
+	 * @how-to        Get CustomizeWoo.com FREE
+	 * @author        Rodolfo Melogli
+	 * @compatible    WooCommerce 7
+	 * @community     https://businessbloomer.com/club/
+	 */
+	
+	add_action( 'template_redirect', 'bbloomer_redirect_login_registration_if_logged_in' );
+	
+	function bbloomer_redirect_login_registration_if_logged_in() {
+		if ( is_page() && is_user_logged_in() && ( has_shortcode( get_the_content(), 'wc_login_form_bbloomer' ) || has_shortcode( get_the_content(), 'wc_reg_form_bbloomer' ) ) ) {
+			wp_safe_redirect( wc_get_page_permalink( 'myaccount' ) );
+			exit;
+		}
+	}
+
 ?>
  
  
