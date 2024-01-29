@@ -1,0 +1,108 @@
+/* 
+Theme Name:		 outbuilt-child
+Theme URI:		 http://childtheme-generator.com/
+Description:	 outbuilt-child is a child theme of outbuilt, created by ChildTheme-Generator.com
+Author:			 Ankush
+Author URI:		 http://childtheme-generator.com/
+Template:		 outbuilt
+Version:		 1.0.0
+Text Domain:	 outbuilt-child
+*/
+
+
+/*
+    Add your custom styles here
+*/
+
+.list-unstyled {list-style:none;} 
+/** Header Login/Logout/Signup Menu **/
+.group-menu { display:flex; gap:5px; align-items:center; margin-left:auto;}
+.group-menu a {color:var(--black-color);}
+.group-menu a:hover {color: var(--primary-color);}
+.account-menu {margin-left:auto;}
+.account-menu li{ position:relative; padding-right:10px;}
+.account-menu li a{color:var(--black-color); display: flex; align-items: center;}
+.account-menu li a svg {margin-right:7px;}
+.account-menu>li>a::after {
+    content: '\e813';
+    font-family: 'fontello';
+    font-style: normal;
+    font-weight: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: 0.2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: 0.2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 1.5rem;
+    right: -1rem;
+    display: inline-block;
+}
+.account-menu .sub-menu {
+	padding: 1.3rem 0;
+    text-align: left;
+    border-top: 0;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    min-width: 20rem;
+    background-color: var(--white-color);
+	color:var(--black-color);
+    border-radius: 0.5rem;
+    transform: translateY(2rem);
+    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    z-index: 999;
+}
+.account-menu li:hover .sub-menu {
+	visibility: visible;
+    opacity: 1;
+    z-index: 9;
+    transform: translateY(0%);
+    transition-delay: 0s, 0s, 0.3s;
+    left: 0;
+}
+.account-menu .sub-menu li a { line-height:1.1;}
+
+/** Login/Register Form **/
+.login_register_forms .woocommerce-form {margin-top:20px;}
+.login_register_forms {background:#fff; border:1px solid #eee; padding:30px 40px!important; border-radius:10px!important; box-shadow:0 0 10px rgba(0,0,0,.1)}
+.login_register_forms h2{font-size:24px; color: #000; margin:0px!important;}
+.login_register_forms .input-text {border:1px solid #ddd;}
+.login_register_forms .woocommerce-button {margin-top:20px;}
+.login_register_forms .lost_password {margin-bottom:0px;}
+.woocommerce-lost-password .entry-title {margin-bottom:0px;}
+
+/** Contact Form **/
+.wpcf7-form .wpcf7-form-control-wrap {width:100%;}
+.wpcf7-form .wpcf7-form-control-wrap .wpcf7-form-control{width:100%;}
+
+/** Product **/
+ul.products li.product .woocommerce-loop-product__title {line-height:1.2;}
+
+/**Footer **/
+.site-footer .menu li {display:block;}
+.site-footer .menu li a{padding:0;}
+.footer-column-1 .widget:first-child {
+	margin-bottom:0;
+}
+
+@media (min-width:992px){
+	.sidebar-footer.widget-column-4 .footer-column { width:30%!important;}
+	.sidebar-footer.widget-column-4 .footer-column-1{width:35%!important;}
+	.sidebar-footer.widget-column-4 .footer-column-2{width:17.50%!important;}
+	.sidebar-footer.widget-column-4 .footer-column-3{width:17.50%!important;}
+}
+
+
+.oc-testimonial-style-1 .testimonal .content {marign-top:0!important;}
