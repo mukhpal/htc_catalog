@@ -35,4 +35,11 @@
 	add_action('woocommerce_login_form', 'add_register_link_below_login_form');
 
 
+	add_action('wp_logout','auto_redirect_after_logout');
+
+	function auto_redirect_after_logout(){
+		wp_safe_redirect( home_url() );
+		exit;
+	}
+
 ?>
