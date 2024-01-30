@@ -15,10 +15,17 @@ Text Domain:	 outbuilt-child
 */
 
 .list-unstyled {list-style:none;} 
+@media (max-width:992px){
+    .content-area {margin-bottom: 0;}
+}
 /** Header Login/Logout/Signup Menu **/
 .group-menu { display:flex; gap:5px; align-items:center; margin-left:auto;}
 .group-menu a {color:var(--black-color);}
 .group-menu a:hover {color: var(--primary-color);}
+@media (max-width:767px){
+    .group-menu {margin-right: 7px;}
+    .group-menu a:last-child, .group-menu span {display: none;}
+}
 .account-menu {margin-left:auto;}
 .account-menu li{ position:relative; padding-right:10px;}
 .account-menu li a{color:var(--black-color); display: flex; align-items: center;}
@@ -76,12 +83,22 @@ Text Domain:	 outbuilt-child
 
 /** Login/Register Form **/
 .login_register_forms .woocommerce-form {margin-top:20px;}
-.login_register_forms {background:#fff; border:1px solid #eee; padding:30px 40px!important; border-radius:10px!important; box-shadow:0 0 10px rgba(0,0,0,.1)}
-.login_register_forms h2{font-size:24px; color: #000; margin:0px!important;}
+ 
+.login_register_forms {background:#fff; border:1px solid #eee; border-radius:10px!important; box-shadow:0 0 10px rgba(0,0,0,.1)}
+.login_register_forms h2{font-size:24px; margin:0px!important;}
 .login_register_forms .input-text {border:1px solid #ddd;}
 .login_register_forms .woocommerce-button {margin-top:20px;}
 .login_register_forms .lost_password {margin-bottom:0px;}
 .woocommerce-lost-password .entry-title {margin-bottom:0px;}
+
+/* Register form */ 
+.login_register_forms .user-registration {padding: 0; border:0;} 
+.login_register_forms .user-registration .ur-form-row {margin: 0 -10px;} 
+.login_register_forms .user-registration .ur-form-row label { font-weight: 400!important; color:#333; margin:0 0 5px; line-height: 1;} 
+.login_register_forms .user-registration .input-text,
+.login_register_forms .user-registration .select { height:40px; border-radius: 3px!important; border:1px solid #ddd; margin:0!important} 
+.login_register_forms .user-registration .ur-button-container { text-align: center; margin:0 -10px;} 
+.login_register_forms .user-registration .ur-button-container .btn-primary {margin: 0;} 
 
 /** Contact Form **/
 .wpcf7-form .wpcf7-form-control-wrap {width:100%;}
@@ -96,6 +113,7 @@ ul.products li.product .woocommerce-loop-product__title {line-height:1.2;}
 .footer-column-1 .widget:first-child {
 	margin-bottom:0;
 }
+.footer-column-1 p {margin-bottom: 10px;}
 
 @media (min-width:992px){
 	.sidebar-footer.widget-column-4 .footer-column { width:30%!important;}
@@ -105,4 +123,14 @@ ul.products li.product .woocommerce-loop-product__title {line-height:1.2;}
 }
 
 
-.oc-testimonial-style-1 .testimonal .content {marign-top:0!important;}
+.oc-testimonial-style-1 .testimonal .content {margin-top:0!important;}
+
+/* Related Products */
+.woocommerce-tabs {
+    padding-bottom: 3rem;
+}
+.related.products {
+    border-top: 1px solid #ddd;
+    padding-top: 3rem;
+}
+ 
