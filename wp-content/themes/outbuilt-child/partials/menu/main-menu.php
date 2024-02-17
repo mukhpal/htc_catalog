@@ -33,7 +33,8 @@
             // Display the login link for users who are not logged in
             ?>
             <div class="list-unstyled group-menu">	
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path id="username" d="M12.25,16v-.285A5.155,5.155,0,0,0,7,10.673a5.155,5.155,0,0,0-5.25,5.042V16H0v-.285a6.591,6.591,0,0,1,2.055-4.778A7.088,7.088,0,0,1,7,8.965a7.089,7.089,0,0,1,4.946,1.972A6.591,6.591,0,0,1,14,15.715V16ZM3.421,3.669A3.629,3.629,0,0,1,7,0a3.629,3.629,0,0,1,3.578,3.669A3.63,3.63,0,0,1,7,7.34,3.63,3.63,0,0,1,3.421,3.669Zm1.666,0a1.913,1.913,0,1,0,3.825,0,1.913,1.913,0,1,0-3.825,0Z" transform="translate(0)" fill="#333"></path></svg> <a href="<?php echo home_url('/login/'); ?>">Log in</a> <span>or</span> <a href="<?php echo home_url(''); ?>/register">Register</a>
+                <a class="login_btn" href="<?php echo home_url('/login/'); ?>"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path id="username" d="M12.25,16v-.285A5.155,5.155,0,0,0,7,10.673a5.155,5.155,0,0,0-5.25,5.042V16H0v-.285a6.591,6.591,0,0,1,2.055-4.778A7.088,7.088,0,0,1,7,8.965a7.089,7.089,0,0,1,4.946,1.972A6.591,6.591,0,0,1,14,15.715V16ZM3.421,3.669A3.629,3.629,0,0,1,7,0a3.629,3.629,0,0,1,3.578,3.669A3.63,3.63,0,0,1,7,7.34,3.63,3.63,0,0,1,3.421,3.669Zm1.666,0a1.913,1.913,0,1,0,3.825,0,1.913,1.913,0,1,0-3.825,0Z" transform="translate(0)" fill="#333"></path></svg>  Log in</a> 
+				<a class="register_btn" href="<?php echo home_url(''); ?>/register">Register</a>
             </div>
             <?php
         }

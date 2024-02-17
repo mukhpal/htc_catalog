@@ -9,21 +9,35 @@ Version:		 1.0.0
 Text Domain:	 outbuilt-child
 */
 
-
 /*
     Add your custom styles here
 */
 
-.list-unstyled {list-style:none;} 
+:root {
+	--primary-color: #b06f0f;
+}
+
+.list-unstyled {list-style:none;}
+.site-branding img {max-height: 54px;}
 @media (max-width:992px){
     .content-area {margin-bottom: 0;}
 }
+.menu .sub-menu {padding-block:0;}
+.menu .sub-menu li:not(:last-child) { border-bottom:1px solid #efefef !important;}
+
+.login_btn {background:var(--black-color); color:var(--white-color); border-radius:40px; padding: 5px 14px; min-width:110px; text-align:center; transition: all .5s ease-in-out; font-size:14px;}
+.login_btn:hover, .login_btn:visited {color:#fff!important; background:var(--black-color);}
+.login_btn:hover svg path{fill:#fff; transition: all .5s ease-in-out;}
+.login_btn svg {width:12px; height:12px; margin-right:4px;}
+.login_btn svg path {fill:var(--white-color);}
+.register_btn {background:#ddd; color:var(--black-color); border-radius:40px; padding: 5px 10px; min-width:110px; text-align:center; transition: all .5s ease-in-out; font-size:14px;}
+.register_btn:hover, .register_btn:visited  {background:var(--black-color); color:var(--white-color); border-radius:40px; padding: 5px 10px; min-width:110px; text-align:center;}
+
 /** Header Login/Logout/Signup Menu **/
 .group-menu { display:flex; gap:5px; align-items:center; margin-left:auto;}
-.group-menu a {color:var(--black-color);}
-.group-menu a:hover {color: var(--primary-color);}
+  
 @media (max-width:767px){
-    .group-menu {margin-right: 7px;}
+    .group-menu {margin-right:7px;}
     .group-menu a:last-child, .group-menu span {display: none;}
 }
 .account-menu {margin-left:auto;}
@@ -52,25 +66,8 @@ Text Domain:	 outbuilt-child
     right: -1rem;
     display: inline-block;
 }
-.account-menu .sub-menu {
-	padding: 1.3rem 0;
-    text-align: left;
-    border-top: 0;
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    min-width: 20rem;
-    background-color: var(--white-color);
-	color:var(--black-color);
-    border-radius: 0.5rem;
-    transform: translateY(2rem);
-    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
-    z-index: 999;
-}
+.account-menu .sub-menu { padding: 1.3rem 0; text-align: left; border-top: 0; visibility: hidden; opacity: 0; position: absolute; top: 100%; left: 0; width: 100%; min-width: 20rem; background-color: var(--white-color); color:var(--black-color);
+border-radius: 0.5rem; transform: translateY(2rem); box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.1); transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s; z-index: 999;}
 .account-menu li:hover .sub-menu {
 	visibility: visible;
     opacity: 1;
@@ -83,7 +80,6 @@ Text Domain:	 outbuilt-child
 
 /** Login/Register Form **/
 .login_register_forms .woocommerce-form {margin-top:20px;}
- 
 .login_register_forms {background:#fff; border:1px solid #eee; border-radius:10px!important; box-shadow:0 0 10px rgba(0,0,0,.1)}
 .login_register_forms h2{font-size:24px; margin:0px!important;}
 .login_register_forms .input-text {border:1px solid #ddd;}
@@ -114,6 +110,14 @@ ul.products li.product .woocommerce-loop-product__title {line-height:1.2;}
 	margin-bottom:0;
 }
 .footer-column-1 p {margin-bottom: 10px;}
+.widget {margin-bottom: 4rem;}
+.footer-text {padding:1rem 10px;}
+.back-to-top { right:10px; bottom:10px;}
+@media (max-width:767px){
+	.widget {margin-bottom:2rem;}
+	.widget-title{margin-bottom:.65rem;}
+	.menu li {margin-right:0;}
+}
 
 @media (min-width:992px){
 	.sidebar-footer.widget-column-4 .footer-column { width:30%!important;}
@@ -122,15 +126,49 @@ ul.products li.product .woocommerce-loop-product__title {line-height:1.2;}
 	.sidebar-footer.widget-column-4 .footer-column-3{width:17.50%!important;}
 }
 
-
 .oc-testimonial-style-1 .testimonal .content {margin-top:0!important;}
 
 /* Related Products */
-.woocommerce-tabs {
-    padding-bottom: 3rem;
+table th, table td {padding: 1.5rem 2rem;}
+h1.entry-title { margin-top:20px;}
+.woocommerce-tabs {padding-bottom: 0rem;}
+.related.products {border-top: 1px solid #ddd; padding-top: 3rem;}
+.wc-block-cart__submit-button { background-color: var(--black-color)}
+.woo-variation-swatches .wvs-style-squared.variable-items-wrapper.image-variable-items-wrapper .variable-item:not(.radio-variable-item){padding: 0; border-radius: 70px; overflow: hidden;}
+
+@media (min-width: 992px) {
+	h1.entry-title { margin-top:40px;}
+	.right-sidebar .widget-area { padding-left: 2rem; }
+	.variations_form {max-width:500px;}
 }
-.related.products {
-    border-top: 1px solid #ddd;
-    padding-top: 3rem;
+.woocommerce-tabs ul.tabs {margin-bottom:2.5rem;}
+.woocommerce-tabs .woocommerce-Tabs-panel--description.panel h2:first-of-type {
+    margin-bottom: 1rem;
 }
  
+.woocommerce .button:active, .woocommerce .menu li.btn a:active, .menu li.btn .woocommerce a:active {
+	background:#000;
+}
+.woocommerce .button, .woocommerce .menu li.btn a, .menu li.btn .woocommerce a {font-size:14px;}
+.woocommerce-tabs .panel h2:first-of-type {
+	margin-bottom: 10px; margin-top:0;
+}
+.woocommerce-tabs .panel #reviews #comments { margin-bottom:10px;}
+/******************/
+/** Single Product
+/****************/
+.single-product #secondary{ display:none;}
+.single-product #primary{flex:0 0 100%!important; margin-right:0;}
+@media (min-width: 992px){
+	.single-product div.product .woocommerce-product-gallery {flex: 0 0 40%; margin-right:0;}
+	.single-product div.product .summary {flex: 0 0 60%;}
+}
+.woocommerce-product-gallery__wrapper .zoomImg {background:var(--white-color);}
+
+@media (max-width:991px){
+	.entry {margin-bottom: 3rem;}
+}
+
+/**** Contact ****/
+.form-group {margin-bottom:15px;}
+.form-group p {margin-bottom:0;}
