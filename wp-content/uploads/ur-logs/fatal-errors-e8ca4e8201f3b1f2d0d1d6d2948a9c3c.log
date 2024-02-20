@@ -31,3 +31,21 @@ Stack trace:
 #12 {main}
   thrown in /data/html/htc_catalog/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 942
 
+2024-02-20T05:46:36+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "custom_product_groups_install" not found or invalid function name in /Users/mukhpalsingh/Documents/Developments/PHP/Wordpress/htc_catalog/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /Users/mukhpalsingh/Documents/Developments/PHP/Wordpress/htc_catalog/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#1 /Users/mukhpalsingh/Documents/Developments/PHP/Wordpress/htc_catalog/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /Users/mukhpalsingh/Documents/Developments/PHP/Wordpress/htc_catalog/wp-admin/includes/plugin.php(693): do_action('activate_woo-at...', false)
+#3 /Users/mukhpalsingh/Documents/Developments/PHP/Wordpress/htc_catalog/wp-admin/plugins.php(58): activate_plugin('woo-attribute-i...', 'http://localhos...', false)
+#4 {main}
+  thrown in /Users/mukhpalsingh/Documents/Developments/PHP/Wordpress/htc_catalog/wp-includes/class-wp-hook.php on line 324
+
+2024-02-20T05:46:42+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "custom_product_groups_install" not found or invalid function name in /Users/mukhpalsingh/Documents/Developments/PHP/Wordpress/htc_catalog/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /Users/mukhpalsingh/Documents/Developments/PHP/Wordpress/htc_catalog/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#1 /Users/mukhpalsingh/Documents/Developments/PHP/Wordpress/htc_catalog/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /Users/mukhpalsingh/Documents/Developments/PHP/Wordpress/htc_catalog/wp-admin/includes/plugin.php(693): do_action('activate_woo-at...', false)
+#3 /Users/mukhpalsingh/Documents/Developments/PHP/Wordpress/htc_catalog/wp-admin/plugins.php(58): activate_plugin('woo-attribute-i...', 'http://localhos...', false)
+#4 {main}
+  thrown in /Users/mukhpalsingh/Documents/Developments/PHP/Wordpress/htc_catalog/wp-includes/class-wp-hook.php on line 324
+
