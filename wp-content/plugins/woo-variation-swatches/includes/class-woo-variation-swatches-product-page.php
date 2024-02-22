@@ -3,7 +3,7 @@
     
     if ( ! class_exists( 'Woo_Variation_Swatches_Product_Page' ) ) {
         class Woo_Variation_Swatches_Product_Page {
-            
+
             protected static $_instance = null;
             
             protected function __construct() {
@@ -356,7 +356,7 @@
                 $raw_html_attributes[ 'class' ]                 = implode( ' ', array_unique( array_values( $css_classes ) ) );
                 $raw_html_attributes[ 'data-attribute_name' ]   = wc_variation_attribute_name( $attribute );
                 $raw_html_attributes[ 'data-attribute_values' ] = wc_esc_json( wp_json_encode( array_values( $options ) ) );
-                
+
                 return $raw_html_attributes;
             }
             
@@ -594,7 +594,7 @@
             }
             
             public function image_attribute( $data, $attribute_type, $variation_data = array() ) {
-                
+
                 if ( 'image' === $attribute_type ) {
                     
                     $option_name = $data[ 'option_name' ];
@@ -888,6 +888,10 @@
                         ) );
                         
                         foreach ( $terms as $term ) {
+                            global $wpdb;
+                            $group_name = $wpdb->get_var( $wpdb->prepare( "SELECT name FROM {$wpdb->prefix}attribute_groups WHERE id = %d", $term->term_group ) );
+                            $term->term_group = $group_name;
+
                             if ( in_array( $term->slug, $options, true ) ) {
                                 
                                 $swatches_data[] = $this->get_swatch_data( $args, $term );
@@ -919,37 +923,88 @@
                 $wrapper     = '';
                 $wrapper_end = '';
                 
-                if ( ! empty( $options ) && ! empty( $swatches_data ) && $product ) {
+                // if ( ! empty( $options ) && ! empty( $swatches_data ) && $product ) {
                     
-                    $wrapper = $this->wrapper_start( $args, $attribute, $product, $attribute_type, $options );
+                //     $wrapper = $this->wrapper_start( $args, $attribute, $product, $attribute_type, $options );
                     
+                //     $__attribute_type = $attribute_type;
+
+                //     foreach ( $swatches_data as $data ) {
+
+                //         // If attribute have no image we should convert attribute type image to attribute type button
+                        
+                //         $attribute_type = $__attribute_type;
+                //         if ( 'image' === $attribute_type && ! is_array( $this->get_image_attribute( $data, $attribute_type ) ) ) {
+                //             $attribute_type = 'button';
+                //         }
+                        
+                //         // If 3rd party plugin wants to remove some attribute from list
+                //         if ( apply_filters( 'woo_variation_swatches_remove_attribute_item', false, $data, $attribute_type ) ) {
+                //             continue;
+                //         }
+
+                //         $item .= $this->item_start( $data, $attribute_type );
+                        
+                //         $item .= $this->color_attribute( $data, $attribute_type );
+                //         $item .= $this->image_attribute( $data, $attribute_type );
+                //         $item .= $this->button_attribute( $data, $attribute_type );
+                //         $item .= $this->radio_attribute( $data, $attribute_type );
+                        
+                //         $item .= $this->item_end();
+                //     }
+                    
+                //     $wrapper_end = $this->wrapper_end();
+                // }
+
+                if (!empty($options) && !empty($swatches_data) && $product) {
                     $__attribute_type = $attribute_type;
-                    
-                    foreach ( $swatches_data as $data ) {
-                        
-                        // If attribute have no image we should convert attribute type image to attribute type button
-                        
-                        $attribute_type = $__attribute_type;
-                        if ( 'image' === $attribute_type && ! is_array( $this->get_image_attribute( $data, $attribute_type ) ) ) {
-                            $attribute_type = 'button';
+                
+                    $grouped_terms = array();
+                
+                    foreach ($swatches_data as $data) {
+                        $group = $data['item']->term_group;
+                
+                        if (!isset($grouped_terms[$group])) {
+                            $grouped_terms[$group] = [];
                         }
-                        
-                        // If 3rd party plugin wants to remove some attribute from list
-                        if ( apply_filters( 'woo_variation_swatches_remove_attribute_item', false, $data, $attribute_type ) ) {
-                            continue;
-                        }
-                        
-                        $item .= $this->item_start( $data, $attribute_type );
-                        
-                        $item .= $this->color_attribute( $data, $attribute_type );
-                        $item .= $this->image_attribute( $data, $attribute_type );
-                        $item .= $this->button_attribute( $data, $attribute_type );
-                        $item .= $this->radio_attribute( $data, $attribute_type );
-                        
-                        $item .= $this->item_end();
+                
+                        $grouped_terms[$group][] = $data;
                     }
-                    
-                    $wrapper_end = $this->wrapper_end();
+                
+                    // Display grouped terms
+                    foreach ($grouped_terms as $group_name => $group_terms) {
+                        echo '<div class="group">';
+                        echo '<h2>' . $group_name . '</h2>';
+                        echo '<ul class="swatches-list">';
+                        foreach ($group_terms as $term) {
+                            echo '<li class="swatch-item">' . $term['item']->Name . '</li>';
+                        }
+                        echo '</ul>';
+                        echo '</div>';
+                
+                        // Generate swatches items for each group
+                        foreach ($group_terms as $term) {
+                            $data = $term;
+                
+                            $attribute_type = $__attribute_type;
+                            if ('image' === $attribute_type && !is_array($this->get_image_attribute($data, $attribute_type))) {
+                                $attribute_type = 'button';
+                            }
+                
+                            if (apply_filters('woo_variation_swatches_remove_attribute_item', false, $data, $attribute_type)) {
+                                continue;
+                            }
+                
+                            echo '<div class="swatch">';
+                            echo $this->item_start($data, $attribute_type);
+                            echo $this->color_attribute($data, $attribute_type);
+                            echo $this->image_attribute($data, $attribute_type);
+                            echo $this->button_attribute($data, $attribute_type);
+                            echo $this->radio_attribute($data, $attribute_type);
+                            echo $this->item_end();
+                            echo '</div>';
+                        }
+                    }
                 }
                 
                 // End Swatches

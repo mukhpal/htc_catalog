@@ -26,6 +26,9 @@ if ( ! class_exists( 'Woo_Variation_Swatches_Term_Meta' ) ):
 			add_action( "created_term", array( $this, 'save' ), 10, 3 );
 			add_action( "edit_term", array( $this, 'save' ), 10, 3 );
 			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+			add_action( "{$this->taxonomy}_add_form_fields", array( $this, 'add_group_selector' ) );
+			add_action( "{$this->taxonomy}_edit_form_fields", array( $this, 'add_group_selector' ), 10 );
+
 
 			// Add columns
 			add_filter( "manage_edit-{$this->taxonomy}_columns", array( $this, 'taxonomy_columns' ) );
@@ -34,6 +37,35 @@ if ( ! class_exists( 'Woo_Variation_Swatches_Term_Meta' ) ):
 
 			do_action( 'woo_variation_swatches_term_meta_loaded', $this );
 		}
+
+		public function add_group_selector( $taxonomy ) {
+			
+			global $wpdb;
+			$group_id	=	0;
+			if(isset( $taxonomy->term_id) ){
+				$group = $wpdb->get_results("SELECT term_group FROM {$wpdb->prefix}terms where term_id = $taxonomy->term_id");
+				foreach ($group as $data) {
+					$group_id	=	$data->term_group;
+				}
+			}
+
+			// Fetch groups from the database
+			$groups = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}attribute_groups");
+
+			// Display group selection dropdown
+			echo '<div class="form-field">';
+			echo '<label for="term_group">Select Group:</label>';
+			echo '<select name="term_group" id="term_group">';
+			echo '<option value="">Select a Group</option>'; // Add an empty option for placeholder text
+
+			foreach ($groups as $group) {
+				$selected = ($group->id == $group_id) ? 'selected' : '';
+				echo '<option value="' . esc_attr($group->id) . '" ' . $selected . '>' . esc_html($group->name) . '</option>';
+			}
+
+			echo '</select>';
+			echo '</div>';
+        }
 
 		public function preview( $attribute_type, $term_id, $fields ) {
 
@@ -52,7 +84,7 @@ if ( ! class_exists( 'Woo_Variation_Swatches_Term_Meta' ) ):
 				$is_dual_color   = wc_string_to_bool( get_term_meta( $term_id, 'is_dual_color', true ) );
 				$secondary_color = sanitize_hex_color( get_term_meta( $term_id, 'secondary_color', true ) );
 
-				if ( $is_dual_color && woo_variation_swatches()->is_pro() ) {
+				if ( $is_dual_color) {
 					$angle = woo_variation_swatches()->get_frontend()->get_dual_color_gradient_angle();
 					printf( '<div class="wvs-preview wvs-color-preview wvs-dual-color-preview" style="background: linear-gradient(%3$s, %1$s 0%%, %1$s 50%%, %2$s 50%%, %2$s 100%%);"></div>', esc_attr( $secondary_color ), esc_attr( $primary_color ), esc_attr( $angle ) );
 				} else {
@@ -62,10 +94,6 @@ if ( ! class_exists( 'Woo_Variation_Swatches_Term_Meta' ) ):
 		}
 
 		public function group_name( $attribute_type, $term_id ) {
-
-			if ( ! woo_variation_swatches()->is_pro() ) {
-				return '';
-			}
 
 			$group = sanitize_text_field( get_term_meta( $term_id, 'group_name', true ) );
 			if ( $group ) {
@@ -99,9 +127,9 @@ if ( ! class_exists( 'Woo_Variation_Swatches_Term_Meta' ) ):
 				unset( $columns['cb'] );
 			}
 
-			if ( woo_variation_swatches()->is_pro() ) {
+			// if ( woo_variation_swatches()->is_pro() ) {
 				$columns['wvs-meta-group'] = esc_html__( 'Group', 'woo-variation-swatches' );
-			}
+			// }
 
 			return array_merge( $new_columns, $columns );
 		}
@@ -149,7 +177,7 @@ if ( ! class_exists( 'Woo_Variation_Swatches_Term_Meta' ) ):
 			wp_enqueue_script( 'wp-color-picker' );
 		}
 
-		public function save( $term_id, $tt_id = '', $taxonomy = '' ) {
+		public function save( $term_id, $tt_id = '', $taxonomy = '', $term_group  = '' ) {
 
 			if ( $taxonomy == $this->taxonomy ) {
 				foreach ( $this->fields as $field ) {
@@ -183,7 +211,9 @@ if ( ! class_exists( 'Woo_Variation_Swatches_Term_Meta' ) ):
 									do_action( 'woo_variation_swatches_save_term_meta', $term_id, $field, $post_value, $taxonomy );
 									break;
 							}
+
 							update_term_meta( $term_id, $field['id'], $post_value );
+							update_term_meta( $term_id, 'term_group', $_POST['term_group'] );
 						}
 					}
 				}
