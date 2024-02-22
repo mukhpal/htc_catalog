@@ -973,37 +973,38 @@
                 
                     // Display grouped terms
                     foreach ($grouped_terms as $group_name => $group_terms) {
-                        echo '<div class="group">';
-                        echo '<h2>' . $group_name . '</h2>';
-                        echo '<ul class="swatches-list">';
-                        foreach ($group_terms as $term) {
-                            echo '<li class="swatch-item">' . $term['item']->Name . '</li>';
-                        }
-                        echo '</ul>';
+                        echo '<div class="group custom-swatches-title">';
+                        echo '<h4 class="h4">' . $group_name . '</h4>';
+                        //echo '<ul class="swatches-list">';
+                        // foreach ($group_terms as $term) {
+                        //     echo '<li class="swatch-item">' . $term['item']->Name . '</li>';
+                        // }
+                        //echo '</ul>';
                         echo '</div>';
                 
                         // Generate swatches items for each group
-                        foreach ($group_terms as $term) {
-                            $data = $term;
-                
-                            $attribute_type = $__attribute_type;
-                            if ('image' === $attribute_type && !is_array($this->get_image_attribute($data, $attribute_type))) {
-                                $attribute_type = 'button';
+                        echo '<ul class="swatch custom-swatches">';
+                            foreach ($group_terms as $term) {
+                                $data = $term;
+                    
+                                $attribute_type = $__attribute_type;
+                                if ('image' === $attribute_type && !is_array($this->get_image_attribute($data, $attribute_type))) {
+                                    $attribute_type = 'button';
+                                }
+                    
+                                if (apply_filters('woo_variation_swatches_remove_attribute_item', false, $data, $attribute_type)) {
+                                    continue;
+                                }
+                    
+                                
+                                echo $this->item_start($data, $attribute_type);
+                                echo $this->color_attribute($data, $attribute_type);
+                                echo $this->image_attribute($data, $attribute_type);
+                                echo $this->button_attribute($data, $attribute_type);
+                                echo $this->radio_attribute($data, $attribute_type);
+                                echo $this->item_end();
                             }
-                
-                            if (apply_filters('woo_variation_swatches_remove_attribute_item', false, $data, $attribute_type)) {
-                                continue;
-                            }
-                
-                            echo '<div class="swatch">';
-                            echo $this->item_start($data, $attribute_type);
-                            echo $this->color_attribute($data, $attribute_type);
-                            echo $this->image_attribute($data, $attribute_type);
-                            echo $this->button_attribute($data, $attribute_type);
-                            echo $this->radio_attribute($data, $attribute_type);
-                            echo $this->item_end();
-                            echo '</div>';
-                        }
+                        echo '</ul>';
                     }
                 }
                 

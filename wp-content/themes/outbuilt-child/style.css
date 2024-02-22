@@ -145,7 +145,6 @@ h1.entry-title { margin-top:20px;}
 .woocommerce-tabs .woocommerce-Tabs-panel--description.panel h2:first-of-type {
     margin-bottom: 1rem;
 }
- 
 .woocommerce .button:active, .woocommerce .menu li.btn a:active, .menu li.btn .woocommerce a:active {
 	background:#000;
 }
@@ -172,3 +171,14 @@ h1.entry-title { margin-top:20px;}
 /**** Contact ****/
 .form-group {margin-bottom:15px;}
 .form-group p {margin-bottom:0;}
+
+/* Variations Customization */
+.custom-swatches-title .h4{margin: 0 0 10px;}
+.custom-swatches { display: flex; flex-wrap: wrap; list-style: none; gap: 5px; padding: 0; margin-top: 0; }
+.custom-swatches .variable-item-contents {width: 30px; height: 30px; border-radius: 30px; overflow: hidden;}
+
+.reset_variations {margin-block: 10px;}
+
+@media (min-width:1300px){
+    table th, table td {padding: 1rem 2rem;}
+}
