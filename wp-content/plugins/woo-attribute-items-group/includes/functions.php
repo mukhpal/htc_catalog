@@ -39,6 +39,22 @@ function get_group($id) {
     $table_name = $wpdb->prefix . 'attribute_groups';
     return $wpdb->get_results("SELECT * FROM $table_name where id = $id");
 }
+// Read single groups id
+function get_group_name($id) {
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'attribute_groups';
+    $query = $wpdb->prepare("SELECT * FROM $table_name WHERE id = %d", $id);
+    $result = $wpdb->get_row($query);
+    // var_dump($result);
+    // Verify if the result exists and has a name column
+    if ($result && isset($result->name)) {
+        // The record exists and has a name column
+        return $result->name;
+    } else {
+        // The record does not exist or does not have a name column
+        return false;
+    }
+}
 
 // Update an existing group
 function update_group($id, $name, $description) {

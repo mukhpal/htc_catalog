@@ -16,7 +16,7 @@ if ( ! class_exists( 'Woo_Variation_Swatches_Term_Meta' ) ):
 			$this->fields    = $fields;
 
 			// Category/term ordering
-			// add_action( 'create_term', array( $this, 'create_term' ), 5, 3 );
+			add_action( 'create_term', array( $this, 'create_term' ), 5, 3 );
 
 			add_action( 'delete_term', array( $this, 'delete_term' ), 5, 4 );
 
@@ -66,6 +66,35 @@ if ( ! class_exists( 'Woo_Variation_Swatches_Term_Meta' ) ):
 			echo '</select>';
 			echo '</div>';
         }
+
+		public function create_term( $term_id, $tt_id, $taxonomy ) {
+			global $wpdb;
+			
+			if ( isset( $_POST['term_group'] ) ) {
+				$term_group = intval( sanitize_text_field( $_POST['term_group'] ) );
+				
+				// Update term group using custom SQL query
+				$result = $wpdb->query(
+					$wpdb->prepare(
+						"UPDATE {$wpdb->terms} SET term_group = %d WHERE term_id = %d",
+						$term_group,
+						$term_id
+					)
+				);
+				
+				if ( false === $result ) {
+					// Error occurred during the query execution
+					error_log( "Error updating term group for term ID: $term_id" );
+				} elseif ( 0 === $result ) {
+					// No rows were affected, term ID may not exist
+					error_log( "No rows updated for term ID: $term_id" );
+				} else {
+					// Success: Term group updated
+					error_log( "Term group updated successfully for term ID: $term_id" );
+				}
+			}
+		}
+		
 
 		public function preview( $attribute_type, $term_id, $fields ) {
 
@@ -152,14 +181,32 @@ if ( ! class_exists( 'Woo_Variation_Swatches_Term_Meta' ) ):
 			if ( 'wvs-meta-group' !== $column ) {
 				return $columns;
 			}
+			// $attribute = woo_variation_swatches()->get_backend()->get_attribute_taxonomy( $this->taxonomy );
+			// $attribute_type = $attribute->attribute_type;
+			// echo $this->group_name( $attribute_type, $term_id );
+			$group_id	=	0;
+			$term	=	get_term($term_id);
+			if(isset($term->term_group) && !empty($term->term_group) ){
+				$group_id	=	$term->term_group;
+			}
+			
+			return $this->get_group_name_from_termId($group_id);
+		}
 
-			$attribute = woo_variation_swatches()->get_backend()->get_attribute_taxonomy( $this->taxonomy );
-
-			$attribute_type = $attribute->attribute_type;
-
-			echo $this->group_name( $attribute_type, $term_id );
-
-			return $columns;
+		// Read single groups id
+		function get_group_name_from_termId($id) {
+			global $wpdb;
+			$table_name = $wpdb->prefix . 'attribute_groups';
+			$query = $wpdb->prepare("SELECT * FROM $table_name WHERE id = %d", $id);
+			$result = $wpdb->get_row($query);
+			// Verify if the result exists and has a name column
+			if ($result && isset($result->name)) {
+				// The record exists and has a name column
+				return $result->name;
+			} else {
+				// The record does not exist or does not have a name column
+				return false;
+			}
 		}
 
 		public function delete_term( $term_id, $tt_id, $taxonomy, $deleted_term ) {
