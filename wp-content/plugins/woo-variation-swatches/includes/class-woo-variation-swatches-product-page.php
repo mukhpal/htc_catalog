@@ -957,6 +957,7 @@
                 // }
 
                 if (!empty($options) && !empty($swatches_data) && $product) {
+                    $wrapper = $this->wrapper_start( $args, $attribute, $product, $attribute_type, $options );
                     $__attribute_type = $attribute_type;
                 
                     $grouped_terms = array();
@@ -971,40 +972,36 @@
                         $grouped_terms[$group][] = $data;
                     }
                 
-                    // Display grouped terms
+                    // Loop through grouped terms
                     foreach ($grouped_terms as $group_name => $group_terms) {
-                        echo '<div class="group custom-swatches-title">';
-                        echo '<h4 class="h4">' . $group_name . '</h4>';
-                        //echo '<ul class="swatches-list">';
-                        // foreach ($group_terms as $term) {
-                        //     echo '<li class="swatch-item">' . $term['item']->Name . '</li>';
-                        // }
-                        //echo '</ul>';
-                        echo '</div>';
+                        // Add group title HTML to output
+                        $item .= '<div class="group custom-swatches-title">';
+                        $item .= '<h4 class="h4">' . esc_html($group_name) . '</h4>';
+                        $item .= '</div>';
                 
                         // Generate swatches items for each group
-                        echo '<ul class="swatch custom-swatches">';
-                            foreach ($group_terms as $term) {
-                                $data = $term;
-                    
-                                $attribute_type = $__attribute_type;
-                                if ('image' === $attribute_type && !is_array($this->get_image_attribute($data, $attribute_type))) {
-                                    $attribute_type = 'button';
-                                }
-                    
-                                if (apply_filters('woo_variation_swatches_remove_attribute_item', false, $data, $attribute_type)) {
-                                    continue;
-                                }
-                    
-                                
-                                echo $this->item_start($data, $attribute_type);
-                                echo $this->color_attribute($data, $attribute_type);
-                                echo $this->image_attribute($data, $attribute_type);
-                                echo $this->button_attribute($data, $attribute_type);
-                                echo $this->radio_attribute($data, $attribute_type);
-                                echo $this->item_end();
+                        $item .= '<ul class="swatch custom-swatches">';
+                        foreach ($group_terms as $term) {
+                            $data = $term;
+                
+                            $attribute_type = $__attribute_type;
+                            if ('image' === $attribute_type && !is_array($this->get_image_attribute($data, $attribute_type))) {
+                                $attribute_type = 'button';
                             }
-                        echo '</ul>';
+                
+                            if (apply_filters('woo_variation_swatches_remove_attribute_item', false, $data, $attribute_type)) {
+                                continue;
+                            }
+                
+                            // Add swatch item HTML to output
+                            $item .= $this->item_start($data, $attribute_type);
+                            $item .= $this->color_attribute($data, $attribute_type);
+                            $item .= $this->image_attribute($data, $attribute_type);
+                            $item .= $this->button_attribute($data, $attribute_type);
+                            $item .= $this->radio_attribute($data, $attribute_type);
+                            $item .= $this->item_end();
+                        }
+                        $item .= '</ul>'; // Close the ul tag for swatches
                     }
                 }
                 
