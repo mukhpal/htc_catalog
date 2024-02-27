@@ -173,11 +173,56 @@ h1.entry-title { margin-top:20px;}
 .form-group p {margin-bottom:0;}
 
 /* Variations Customization */
-.custom-swatches-title .h4{margin: 0 0 10px;}
-.custom-swatches { display: flex; flex-wrap: wrap; list-style: none; gap: 5px; padding: 0; margin-top: 0; }
+.variation_custom {display: block!important;}
+.custom-swatches-title {display: block;}
+.custom-swatches-title .h6{margin: 0;}
+.custom-swatches {margin-bottom: 8px; display: flex; flex-wrap: wrap; list-style: none; padding: 0; margin-top: 0; }
 .custom-swatches .variable-item-contents {width: 30px; height: 30px; border-radius: 30px; overflow: hidden;}
 
 .reset_variations {margin-block: 10px;}
+
+.custom-swatches .variable-item-contents span {position: relative; display: flex; align-items: center; font-size: 14px; padding-right: 10px!important;}
+.custom-swatches .variable-item-contents span::before {
+    content: '';
+    background-color: #ddd;
+    width: 22px; height: 22px;
+    display: inline-block;
+    border-radius: 25px;
+    margin-right: 7px;
+}
+.custom-swatches .variable-item{
+    box-shadow: none!important;
+    border: 1px solid #ddd;
+}
+.custom-swatches .variable-item.selected{
+    border-color: #008800;
+}
+.custom-swatches .variable-item.selected .variable-item-contents span::after {
+    content: '';
+    border: solid #008800;
+    border-width: 0 2px 2px 0;
+    width: 6px;
+    height: 11px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    background-size: 14px 10px; 
+    position: absolute; 
+    left: 13px;
+    top: 5px;
+    z-index: 1;
+}
+.woo-variation-swatches .wvs-style-squared .variable-item:not(.radio-variable-item) {
+    border-radius: 4px!important;
+    margin-left: 0;
+}
+
+.woo-variation-swatches .wvs-style-squared.variable-items-wrapper[aria-label="Top Color"] .variable-item:not(.radio-variable-item),
+.woo-variation-swatches .wvs-style-squared.variable-items-wrapper[aria-label="Bottom Color"] .variable-item:not(.radio-variable-item) {
+    border-radius: 50%!important;
+}
+.single-product div.product .summary .cart .reset_variations {
+    bottom: -10px;
+}
 
 @media (min-width:1300px){
     table th, table td {padding: 1rem 2rem;}

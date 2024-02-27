@@ -339,7 +339,7 @@
                 $classes = array();
                 
                 $shape     = sprintf( 'wvs-style-%s', woo_variation_swatches()->get_option( 'shape_style', 'squared' ) );
-                $classes[] = 'variable-items-wrapper';
+                $classes[] = 'variable-items-wrapper variation_custom';
                 $classes[] = sprintf( '%s-variable-items-wrapper', $attribute_type );
                 $classes[] = sanitize_text_field( $shape );
                 
@@ -976,7 +976,7 @@
                     foreach ($grouped_terms as $group_name => $group_terms) {
                         // Add group title HTML to output
                         $item .= '<div class="group custom-swatches-title">';
-                        $item .= '<h4 class="h4">' . esc_html($group_name) . '</h4>';
+                        $item .= '<h4 class="h6">' . esc_html($group_name) . '</h4>';
                         $item .= '</div>';
                 
                         // Generate swatches items for each group
